@@ -1,25 +1,27 @@
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello, World!");
+
         System.out.println("Задача №1");
         byte mercury = 127;
         short venus = 32767;
         int earth = 2147483647;
         long mars = 9223372036854775207L;
-        float jupiter = 7;
-        double saturn = 16;
+        float jupiter = 3.4f;
+        double saturn = 1.7308;
         System.out.println("Значение переменной mercury с типом byte равно " + mercury);
         System.out.println("Значение переменной venus с типом short равно " + venus);
         System.out.println("Значение переменной earth с типом int равно " + earth);
         System.out.println("Значение переменной mars с типом long равно " + mars);
         System.out.println("Значение переменной jupiter с типом float равно " + jupiter);
         System.out.println("Значение переменной saturn с типом double равно " + saturn);
+
         System.out.println("Задача №2");
         float a = 27.12f;
         System.out.println(a);
         long b = 987678965549L;
         System.out.println(b);
-        double c = 2.786;
+        float c = 2.786f;
         System.out.println(c);
         short d = 569;
         System.out.println(d);
@@ -29,20 +31,29 @@ public class Main {
         System.out.println(f);
         byte g = 67;
         System.out.println(g);
+
         System.out.println(" Задача №3");
-        var LyudmilaPavlovna = 23;
-        var AnnaSergeevna = 27;
-        var EkaterinaAndreevna = 30;
-        var totalQuantity = 480;
+        byte LyudmilaPavlovna = 23;
+        byte AnnaSergeevna = 27;
+        byte EkaterinaAndreevna = 30;
+        short totalQuantity = 480;
         System.out.println("На каждого ученика расчитано " + (totalQuantity / (LyudmilaPavlovna + AnnaSergeevna + EkaterinaAndreevna)) + (" листов бумаги."));
+
         System.out.println(" Задача №4");
-        var perfomance = 16 / 2;
-        var time = 1;
-        System.out.println("За 20 минут машина произвела " + ((time * 20) * perfomance) + (" штук бутылок."));
-        var day = time * 60 * 24;
-        System.out.println(("За сутки машина произвела ") + day * perfomance + (" штук бутылок."));
-        System.out.println(("За три дня машина произвела ") + day * perfomance * 3 + (" штук бутылок."));
-        System.out.println(("За 1 месяц машина произвела ") + day * perfomance * 30 + (" штук бутылок."));
+        byte performanceTwoMinutes = 16;
+        int performanceOneMinutes = performanceTwoMinutes / 2;
+        int performanceTwentyMinutes = performanceOneMinutes * 20;
+        byte minutes = 1;
+        int hour = minutes * 60;
+        int timeDay = hour * 24;
+        int performanceDay = timeDay * performanceOneMinutes;
+        int performanceThreeDay = performanceDay * 3;
+        int performanceMonth = performanceDay * 30;
+        System.out.println("За 20 минут машина произвела " + performanceTwentyMinutes + (" штук бутылок."));
+        System.out.println(("За сутки машина произвела ") + performanceDay + (" штук бутылок."));
+        System.out.println(("За три дня машина произвела ") + performanceThreeDay + (" штук бутылок."));
+        System.out.println(("За 1 месяц машина произвела ") + performanceMonth + (" штук бутылок."));
+
         System.out.println(" Задача №5");
         byte totalBank = 120;
         byte whiteBank = 2;
@@ -51,6 +62,7 @@ public class Main {
         int needToWhiteBank = (totalCabinet * whiteBank);
         int needToBrownBank = (totalCabinet * brownBank);
         System.out.println("В школе, где " + totalCabinet + " классов, нужно " + needToWhiteBank + (" банок белой краски и ") + needToBrownBank + (" банок коричневой краски."));
+
         System.out.println(" Задача №6");
         byte bananas = 80;
         byte milk = 105;
@@ -59,6 +71,7 @@ public class Main {
         int breakfast = ((bananas * 5) + (milk * 2) + (iceCream * 2) + (egg * 4));
         float translation = (breakfast * 0.001f);
         System.out.println("Масса завтрака " + breakfast + " грамм или " + translation + " кг.");
+
         System.out.println(" Задача №7");
         float target = 7;
         float methodOne = 0.25f;
@@ -70,6 +83,7 @@ public class Main {
         float middleAverageWeight = ((methodOne + methodTwo) / 2);
         int middleDay = (int) (target / middleAverageWeight);
         System.out.println("В среднем  при соблюдении диеты, спортсмен должен похудеть в течении " + middleDay + " дней.");
+
         System.out.println(" Задача №8");
         int MariaSalary = 67760;//Зарплата
         int MariaAmountIncrease = (MariaSalary / 100) * 10;//Сумма повышения
