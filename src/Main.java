@@ -33,11 +33,12 @@ public class Main {
         System.out.println(g);
 
         System.out.println(" Задача №3");
-        byte LyudmilaPavlovna = 23;
-        byte AnnaSergeevna = 27;
-        byte EkaterinaAndreevna = 30;
+        byte lyudmilaPavlovna = 23;
+        byte annaSergeevna = 27;
+        byte ekaterinaAndreevna = 30;
         short totalQuantity = 480;
-        System.out.println("На каждого ученика расчитано " + (totalQuantity / (LyudmilaPavlovna + AnnaSergeevna + EkaterinaAndreevna)) + (" листов бумаги."));
+        int numberOfStudents = lyudmilaPavlovna + annaSergeevna + ekaterinaAndreevna;
+        System.out.println("На каждого ученика расчитано " + totalQuantity / numberOfStudents + " листов бумаги.");
 
         System.out.println(" Задача №4");
         byte performanceTwoMinutes = 16;
@@ -59,8 +60,8 @@ public class Main {
         byte whiteBank = 2;
         byte brownBank = 4;
         int totalCabinet = (totalBank / (whiteBank + brownBank));
-        int needToWhiteBank = (totalCabinet * whiteBank);
-        int needToBrownBank = (totalCabinet * brownBank);
+        int needToWhiteBank = totalCabinet * whiteBank;
+        int needToBrownBank = totalCabinet * brownBank;
         System.out.println("В школе, где " + totalCabinet + " классов, нужно " + needToWhiteBank + (" банок белой краски и ") + needToBrownBank + (" банок коричневой краски."));
 
         System.out.println(" Задача №6");
@@ -69,42 +70,42 @@ public class Main {
         byte iceCream = 100;
         byte egg = 70;
         int breakfast = ((bananas * 5) + (milk * 2) + (iceCream * 2) + (egg * 4));
-        float translation = (breakfast * 0.001f);
+        float translation = breakfast * 0.001f;
         System.out.println("Масса завтрака " + breakfast + " грамм или " + translation + " кг.");
 
         System.out.println(" Задача №7");
         float target = 7;
         float methodOne = 0.25f;
         float methodTwo = 0.5f;
-        int dayMethodOne = (int) (target / methodOne);//Тут циганские фокусы)) idea сама подсказала написать (int) после знака =. Вопрос такой "А что так можео было?"
+        int dayMethodOne = (int) (target / methodOne);
         int dayMethodTwo = (int) (target / methodTwo);
         System.out.println("Если спортсмен будет терять по 250 граммов веса в день, то для того, чтобы ему похудеть понадобится " + dayMethodOne + " дней.");
         System.out.println("Если спортсмен будет терять по 500 граммов веса в день, то для того, чтобы ему похудеть понадобится " + dayMethodTwo + " дней.");
-        float middleAverageWeight = ((methodOne + methodTwo) / 2);
+        float middleAverageWeight = (methodOne + methodTwo) / 2;
         int middleDay = (int) (target / middleAverageWeight);
         System.out.println("В среднем  при соблюдении диеты, спортсмен должен похудеть в течении " + middleDay + " дней.");
 
         System.out.println(" Задача №8");
-        int MariaSalary = 67760;//Зарплата
-        int MariaAmountIncrease = (MariaSalary / 100) * 10;//Сумма повышения
-        int MariaSalaryAfter = MariaSalary + MariaAmountIncrease;//Зарплата после повышения
-        int MariaAnnualSalaryBeforeIncrease = MariaSalary * 12;//Годовая зарплата текущая
-        int MariaAnnualSalaryAfterPromotion = MariaSalaryAfter * 12;//Годовая зарплата после повышения
-        int MariaDifferenceInAnnualIncome = MariaAnnualSalaryAfterPromotion - MariaAnnualSalaryBeforeIncrease;//Разница в годовой зарплате
+        int MariaSalary = 67760;
+        int MariaAmountIncrease = (MariaSalary / 100) * 10;
+        int MariaSalaryAfter = MariaSalary + MariaAmountIncrease;
+        int MariaAnnualSalaryBeforeIncrease = MariaSalary * 12;
+        int MariaAnnualSalaryAfterPromotion = MariaSalaryAfter * 12;
+        int MariaDifferenceInAnnualIncome = MariaAnnualSalaryAfterPromotion - MariaAnnualSalaryBeforeIncrease;
         System.out.println(("Мария теперь получает ") + MariaSalaryAfter + (" рублей. Годовой доход вырос на ") + MariaDifferenceInAnnualIncome + (" рублей."));
-        int DenisSalary = 83690;//Зарплата
-        int DenisAmountIncrease = (DenisSalary / 100) * 10;//Сумма повышения
-        int DenisSalaryAfter = DenisSalary + DenisAmountIncrease;//Зарплата после повышения
-        int DenisAnnualSalaryBeforeIncrease = DenisSalary * 12;//Текущая годовая зарплата
-        int DenisAnnualSalaryAfterPromotion = DenisSalaryAfter * 12;//Годовая зарплата после повышения
-        int DenisDifferenceInAnnualIncome = DenisAnnualSalaryAfterPromotion - DenisAnnualSalaryBeforeIncrease;//Разница в годовой зарплате
+        int DenisSalary = 83690;
+        int DenisAmountIncrease = (DenisSalary / 100) * 10;
+        int DenisSalaryAfter = DenisSalary + DenisAmountIncrease;
+        int DenisAnnualSalaryBeforeIncrease = DenisSalary * 12;
+        int DenisAnnualSalaryAfterPromotion = DenisSalaryAfter * 12;
+        int DenisDifferenceInAnnualIncome = DenisAnnualSalaryAfterPromotion - DenisAnnualSalaryBeforeIncrease;
         System.out.println(("Денис теперь получает ") + DenisSalaryAfter + (" рублей. Годовой доход вырос на ") + DenisDifferenceInAnnualIncome + (" рублей."));
         int CristinSalary = 76230;
-        int CristinAmountIncrease = (CristinSalary / 100) * 10;//Сумма повышения
-        int CristinSalaryAfter = CristinSalary + CristinAmountIncrease;//Зарплата после повышения
-        int CristinAnnualSalaryBeforeIncrease = CristinSalary * 12;//Текущая годовая зарплата
-        int CristinAnnualSalaryAfterPromotion = CristinSalaryAfter * 12;//Годовая зарплата после повышения
-        int CristinDifferenceInAnnualIncome = CristinAnnualSalaryAfterPromotion - CristinAnnualSalaryBeforeIncrease;//Разница в годовой зарплате
+        int CristinAmountIncrease = (CristinSalary / 100) * 10;
+        int CristinSalaryAfter = CristinSalary + CristinAmountIncrease;
+        int CristinAnnualSalaryBeforeIncrease = CristinSalary * 12;
+        int CristinAnnualSalaryAfterPromotion = CristinSalaryAfter * 12;
+        int CristinDifferenceInAnnualIncome = CristinAnnualSalaryAfterPromotion - CristinAnnualSalaryBeforeIncrease;
         System.out.println(("Кристина теперь получает ") + CristinSalaryAfter + (" рублей. Годовой доход вырос на ") + CristinDifferenceInAnnualIncome + (" рублей."));
 
 
